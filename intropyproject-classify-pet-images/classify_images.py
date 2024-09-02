@@ -3,7 +3,7 @@
 # */AIPND-revision/intropyproject-classify-pet-images/classify_images.py
 #
 # PROGRAMMER: Truong Huynh
-# DATE CREATED: 08/29/2024                     
+# DATE CREATED: 08/29/2024
 # REVISED DATE: 
 # PURPOSE: Create a function classify_images that uses the classifier function 
 #          to create the classifier labels and then compares the classifier 
@@ -88,4 +88,3 @@ def classify_images(images_dir, results_dic, model):
         # extend list function to add classifier label and the value according to
         # the truth
         results_dic[key].extend([model_label, 1 if truth in model_label else 0])
-

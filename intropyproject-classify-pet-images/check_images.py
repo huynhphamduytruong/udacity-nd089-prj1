@@ -77,7 +77,7 @@ def main():
     check_classifying_images(results)    
 
     
-    # TODO 4: Define adjust_results4_isadog function within the file adjust_results4_isadog.py
+    # Define adjust_results4_isadog function within the file adjust_results4_isadog.py
     # Once the adjust_results4_isadog function has been defined replace 'None' 
     # in the function call with in_arg.dogfile  Once you have done the 
     # replacements your function call should look like this: 
@@ -85,13 +85,13 @@ def main():
     # Adjusts the results dictionary to determine if classifier correctly 
     # classified images as 'a dog' or 'not a dog'. This demonstrates if 
     # model can correctly classify dog images as dogs (regardless of breed)
-    adjust_results4_isadog(results, None)
+    adjust_results4_isadog(results, in_arg.dogfile)
 
     # Function that checks Results Dictionary for is-a-dog adjustment using results
     check_classifying_labels_as_dogs(results)
 
 
-    # TODO 5: Define calculates_results_stats function within the file calculates_results_stats.py
+    # Define calculates_results_stats function within the file calculates_results_stats.py
     # This function creates the results statistics dictionary that contains a
     # summary of the results statistics (this includes counts & percentages). This
     # dictionary is returned from the function call as the variable results_stats    
@@ -103,19 +103,19 @@ def main():
     check_calculating_results(results, results_stats)
 
 
-    # TODO 6: Define print_results function within the file print_results.py
+    # Define print_results function within the file print_results.py
     # Once the print_results function has been defined replace 'None' 
     # in the function call with in_arg.arch  Once you have done the 
     # replacements your function call should look like this: 
     #      print_results(results, results_stats, in_arg.arch, True, True)
     # Prints summary results, incorrect classifications of dogs (if requested)
     # and incorrectly classified breeds (if requested)
-    print_results(results, results_stats, None, True, True)
+    print_results(results, results_stats, in_arg.arch, True, True)
     
-    # TODO 0: Measure total program runtime by collecting end time
+    # Measure total program runtime by collecting end time
     end_time = time()
     
-    # TODO 0: Computes overall runtime in seconds & prints it in hh:mm:ss format
+    # Computes overall runtime in seconds & prints it in hh:mm:ss format
     tot_time = end_time - start_time
     print("\n** Total Elapsed Runtime:",
           str(int((tot_time/3600)))+":"+str(int((tot_time%3600)/60))+":"
