@@ -1,0 +1,156 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = resnet 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 14 key-value pairs.
+Below are 10 of them:
+ 1 key:                   Cat_9961.jpg  label:                        cat
+ 2 key:                   Cat_9963.jpg  label:                        cat
+ 3 key:                   Cat_9972.jpg  label:                        cat
+ 4 key:                   Cat_9980.jpg  label:                        cat
+ 5 key:                    Cat_999.jpg  label:                        cat
+ 6 key:                   Dog_9924.jpg  label:                        dog
+ 7 key:                   Dog_9929.jpg  label:                        dog
+ 8 key:                   Dog_9962.jpg  label:                        dog
+ 9 key:                   Dog_9966.jpg  label:                        dog
+10 key:                   Dog_9973.jpg  label:                        dog
+
+     MATCH:
+
+                  Cat_9961.jpg: 
+Real:                        cat   Classifier:                 tiger cat, cat
+
+                  Cat_9963.jpg: 
+Real:                        cat   Classifier:          tabby, tabby cat, cat
+
+                  Cat_9972.jpg: 
+Real:                        cat   Classifier:              egyptian cat, cat
+
+                  Cat_9980.jpg: 
+Real:                        cat   Classifier:          tabby, tabby cat, cat
+
+                   Cat_999.jpg: 
+Real:                        cat   Classifier:              egyptian cat, cat
+
+                  Dog_9929.jpg: 
+Real:                        dog   Classifier: newfoundland, newfoundland dog
+
+ NOT A MATCH:
+
+                  Dog_9924.jpg: 
+Real:                        dog   Classifier:             labrador retriever
+
+                  Dog_9962.jpg: 
+Real:                        dog   Classifier:                       malinois
+
+                  Dog_9966.jpg: 
+Real:                        dog   Classifier:                         beagle
+
+                  Dog_9973.jpg: 
+Real:                        dog   Classifier:                     pomeranian
+
+                  Dog_9977.jpg: 
+Real:                        dog   Classifier:                      chihuahua
+
+                  Dog_9990.jpg: 
+Real:                        dog   Classifier:             labrador retriever
+
+                   Phone_1.jpg: 
+Real:                      phone   Classifier: hand-held computer, hand-held microcomputer
+
+                    Sofa_1.jpg: 
+Real:                       sofa   Classifier:          studio couch, day bed
+
+# Total Images 14 # Matches: 6 # NOT Matches: 8
+
+     MATCH:
+
+                  Cat_9961.jpg: 
+Real:                        cat   Classifier:                 tiger cat, cat  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                  Cat_9963.jpg: 
+Real:                        cat   Classifier:          tabby, tabby cat, cat  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                  Cat_9972.jpg: 
+Real:                        cat   Classifier:              egyptian cat, cat  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                  Cat_9980.jpg: 
+Real:                        cat   Classifier:          tabby, tabby cat, cat  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                   Cat_999.jpg: 
+Real:                        cat   Classifier:              egyptian cat, cat  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                  Dog_9929.jpg: 
+Real:                        dog   Classifier: newfoundland, newfoundland dog  
+PetLabelDog: 1  ClassLabelDog: 1
+
+ NOT A MATCH:
+
+                  Dog_9924.jpg: 
+Real:                        dog   Classifier:             labrador retriever  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                  Dog_9962.jpg: 
+Real:                        dog   Classifier:                       malinois  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                  Dog_9966.jpg: 
+Real:                        dog   Classifier:                         beagle  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                  Dog_9973.jpg: 
+Real:                        dog   Classifier:                     pomeranian  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                  Dog_9977.jpg: 
+Real:                        dog   Classifier:                      chihuahua  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                  Dog_9990.jpg: 
+Real:                        dog   Classifier:             labrador retriever  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                   Phone_1.jpg: 
+Real:                      phone   Classifier: hand-held computer, hand-held microcomputer  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                    Sofa_1.jpg: 
+Real:                       sofa   Classifier:          studio couch, day bed  
+PetLabelDog: 0  ClassLabelDog: 0
+
+# Total Images 14 # Matches: 6 # NOT Matches: 8
+
+ ** Statistics from calculates_results_stats() function:
+N Images: 14  N Dog Images:  7  N NotDog Images:  7 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  14.3
+
+ ** Check Statistics - calculated from this function as a check:
+N Images: 14  N Dog Images:  7  N NotDog Images:  7 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  14.3
+
+
+*** Results Summary for CNN Model Architecture RESNET ***
+N Images            :  14
+N Dog Images        :   7
+N Not-Dog Images    :   7
+ 
+pct_match           : 42.857143%
+pct_correct_dogs    : 100.000000%
+pct_correct_breed   : 14.285714%
+pct_correct_notdogs : 100.000000%
+
+INCORRECT Dog Breed Assignment:
+Real:                        dog   Classifier:             labrador retriever
+Real:                        dog   Classifier:                       malinois
+Real:                        dog   Classifier:                         beagle
+Real:                        dog   Classifier:                     pomeranian
+Real:                        dog   Classifier:                      chihuahua
+Real:                        dog   Classifier:             labrador retriever
+
+** Total Elapsed Runtime: 0:0:2
