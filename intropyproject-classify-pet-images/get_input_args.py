@@ -41,11 +41,11 @@ def get_input_args():
     parser = argparse.ArgumentParser()
 
     # Creates 3 command line arguments using `add_argument`.
-    parser.add_argument('--dir', type = str, default = 'pet_images/', 
-                        help = 'path to folder of pet images')
-    parser.add_argument('--arch', default = 'vgg', 
-                        help = 'CNN Model Architecture')
-    parser.add_argument('--dogfile', default = 'dognames.txt', 
-                        help = 'path to Text File with Dog Names' )
+    parser.add_argument('--dir', type=str, default='pet_images/', 
+                        help='path to folder of pet images')
+    parser.add_argument('--arch', default='vgg', 
+                        help='CNN Model Architecture')
+    parser.add_argument('--dogfile', default='dognames.txt', 
+                        help='path to Text File with Dog Names' )
 
     return parser.parse_args()
