@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # */AIPND-revision/intropyproject-classify-pet-images/classify_images.py
-#                                                                             
-# PROGRAMMER: 
-# DATE CREATED:                                 
+#
+# PROGRAMMER: Truong Huynh
+# DATE CREATED: 08/29/2024                     
 # REVISED DATE: 
 # PURPOSE: Create a function classify_images that uses the classifier function 
 #          to create the classifier labels and then compares the classifier 
@@ -21,9 +21,9 @@
 #
 ##
 # Imports classifier function for using CNN to classify images 
-from classifier import classifier 
+from classifier import classifier
 
-# TODO 3: Define classify_images function below, specifically replace the None
+# Define classify_images function below, specifically replace the None
 #       below by the function definition of the classify_images function. 
 #       Notice that this function doesn't return anything because the 
 #       results_dic dictionary that is passed into the function is a mutable 
@@ -65,4 +65,27 @@ def classify_images(images_dir, results_dic, model):
      Returns:
            None - results_dic is mutable data type so no return needed.         
     """
-    None 
+    # Process all files in the results_dic - use images_dir to give fullpath
+    # that indicates the folder and the filename (key) to be used in the 
+    # classifier function
+    for key in results_dic:
+        # Set the string variable model_label to be the string that's 
+        #           returned from using the classifier function instead of the   
+        #           empty string below.
+        #
+        # Runs classifier function to classify the images classifier function 
+        # inputs: path + filename  and  model, returns model_label 
+        # as classifier label
+        model_label = classifier(f"{images_dir}/{key}", model)
+
+        # Processes the results so they can be compared with pet image labels
+        # set labels to lowercase (lower) and stripping off whitespace(strip)
+        model_label = model_label.lower().strip()
+
+        # defines truth as pet image label 
+        truth = results_dic[key][0]
+
+        # extend list function to add classifier label and the value according to
+        # the truth
+        results_dic[key].extend([model_label, 1 if truth in model_label else 0])
+
